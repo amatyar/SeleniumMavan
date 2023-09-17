@@ -36,5 +36,5 @@ public class FridayClass2
 				System.out.println("Test case failed.");
 			}
 	}
-
+	
 }

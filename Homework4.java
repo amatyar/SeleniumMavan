@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Homework {
+public class Homework4 {
 
 	public static void main(String[] args) 
 	{
@@ -21,19 +21,34 @@ public class Homework {
 		//Maximize the window
 		dr.manage().window().maximize();
 		//find the locator
-		dr.findElement(By.cssSelector("#button1")).click();
+		dr.findElement(By.cssSelector("#button4")).click();
 		//get alert message
-		String str = dr.switchTo().alert().getText();
+		String s1= dr.switchTo().alert().getText();
 		// test case
-		if(str.equals("I am an alert box!")) 
-		{
-			System.out.println("Test case 1 passed");
+		if(s1.equals("Press a button!")) {
+			System.out.println("Test case pass 0");
 		}
 		else
 		{
-			System.out.println("Test case 1 Failed");
+			System.out.println("Test case fail 0");
 		}
-		//dr.quit();
+//		dr.switchTo().alert().accept();
+//		String s2=  dr.findElement(By.cssSelector("#confirm-alert-text")).getText();
+//		if(s2.equals("You pressed OK!")) {
+//			System.out.println("Test case Pass");
+//		}
+//		else {
+//			System.out.println("Test case fail");
+//		}
+		// i want canceled 
+		dr.switchTo().alert().dismiss();;
+		String s2=  dr.findElement(By.cssSelector("#confirm-alert-text")).getText();
+		if(s2.equals("You pressed Cancel!")) {
+			System.out.println("Test case Pass");
+		}
+		else {
+			System.out.println("Test case fail");
+		}
 	}
 
 }
