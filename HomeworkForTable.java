@@ -33,12 +33,11 @@ public class HomeworkForTable
 		
 			for (int i = 2; i <= T_Rows; i++)
 			{
-				System.out.println(i);
+				//System.out.println(i);
 				String tx = driver.findElement(By.xpath("//*[@id=\"t01\"]/tbody/tr["+i+"]/td[3]")).getText();
-				System.out.println(tx);
-				sum +=Integer.parseInt(tx);
-				
-				
+				System.out.println("List Age:\t"+tx);
+				sum +=Integer.parseInt(tx);			
+			
 			}
 			System.out.println("Total age \t"+sum);
 			System.out.println("Average age: \t" + sum / (rows.size()-1));
@@ -47,10 +46,10 @@ public class HomeworkForTable
 			for(int i =2; i <= T_Rows; i++) 
 			{
 				String txt = driver.findElement(By.xpath("//*[@id=\"t01\"]/tbody/tr["+i+"]/td[1]")).getText();
-				System.out.println(txt);
+				//System.out.println(txt);
 				if(txt.equals("Michael")) 
 				{
-					System.out.println("Test case passed");
+					System.out.println("Test case passed for first name");
 					break;
 				}
 			}
@@ -59,10 +58,10 @@ public class HomeworkForTable
 			for(int i =2; i <= T_Rows; i++) 
 			{
 				String txt1 = driver.findElement(By.xpath("//*[@id=\"t01\"]/tbody/tr["+i+"]/td[2]")).getText();
-				System.out.println(txt1);
+				//System.out.println(txt1);
 				if(txt1.equals("Doe")) 
 				{
-					System.out.println("Test case passed");
+					System.out.println("Test case passed for last name");
 					break;
 				}
 			}
