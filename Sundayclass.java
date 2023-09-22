@@ -25,9 +25,11 @@ public class Sundayclass {
 				System.out.println("Test case outer frame failed.");
 			}
 			
-			//Switching back to main page/content.
+			//Switching back to main page/context.
 			driver.switchTo().defaultContent();
-			
+			//driver.switchTo().parentFrame(); : Switches control to parent frame
+
+			//driver.switchTo().defaultContent(); : Switches control to topmost page.
 			//Validating the title of the page inside iFrame
 			
 			String S1 = driver.getTitle();
